@@ -1,0 +1,24 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Universal */
+
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+  text-align: center;
+  .nav {
+  	float:none;
+    li {
+    	display:inline-block;
+    	float:none;
+    	margin:0 20px;
+    	vertical-align:middle;
+      a {
+        color: black;
+      }
+    }
+  }
+}

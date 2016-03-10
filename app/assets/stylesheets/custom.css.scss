@@ -4,10 +4,11 @@
 /* Universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 .navbar {
+  padding-top: 20px;
   text-align: center;
   .nav {
   	float:none;
@@ -18,13 +19,13 @@ body {
     	vertical-align:middle;
       a {
         color: black;
+        &:hover {
+          background-color: transparent;
+          color: DarkTurquoise;
+        }
       }
     }
   }
-}
-
-span {
-  padding-top: 10px;
 }
 
 /* typography */

@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Mixins */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* Universal */
 
 body {
@@ -26,6 +34,46 @@ body {
       }
     }
   }
+}
+
+/* Footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-light;
+  color: $gray-light;
+
+  a {
+    color: $gray;
+  }
+
+  a:hover {
+    color: $gray-darker;
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 
 /* typography */
@@ -62,34 +110,4 @@ h3 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-/* Footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-light;
-  color: $gray-light;
-
-  a {
-    color: $gray;
-  }
-
-  a:hover {
-    color: $gray-darker;
-  }
-
-  small {
-    float: left;
-  }
-
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
 }

@@ -15,6 +15,10 @@ body {
   padding-top: 120px;
 }
 
+.btn-primary {
+  background-color: DarkTurquoise;
+}
+
 .navbar {
   padding-top: 20px;
   text-align: center;
@@ -64,6 +68,19 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto;
 }
 
 /* miscellaneous */

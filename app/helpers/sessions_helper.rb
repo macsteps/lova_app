@@ -30,7 +30,16 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  # Set remember_digest to nil in db, and delete cookies.
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+
+  # Delete the session cookie and set current user to nil.
   def log_out
+    forget(current_user)
     session.delete(:user_id)
     @current_user = nil
   end

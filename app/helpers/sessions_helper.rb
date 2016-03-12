@@ -18,7 +18,7 @@ module SessionsHelper
       @current_user ||= User.find_by(id: session[:user_id])
     elsif (user_id = cookies.signed[:user_id]) # the cookie (aka remember) is active.
       user = User.find_by(id: user_id)
-      if user && authenticated?(cookies[:remember_token]) # user is not logged in (no session, no cookie)
+      if user && user.authenticated?(cookies.signed[:remember_token]) # user is not logged in (no session, no cookie)
         log_in user
         @current_user = user
       end

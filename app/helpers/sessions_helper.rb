@@ -12,6 +12,11 @@ module SessionsHelper
     cookies.permanent.signed[:remember_token] = user.remember_token
   end
 
+  # Return true if the given user is the current_user
+  def current_user?(user)
+    user == current_user
+  end
+
   # Returns the current logged in user, if it exists.
   def current_user
     if (user_id = session[:user_id]) # the browser session is active
